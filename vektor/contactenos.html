@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contacta con VËKTOR. Visítanos en Barcelona o escríbenos para consultas técnicas sobre bicicletas de alto rendimiento.">
+    <title>Contáctenos | VËKTOR</title>
+    <!-- CSS Modular Architecture -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages/contact.css">
+    <link rel="stylesheet" href="assets/css/components/bot.css">
+</head>
+
+<body>
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <h1>VËKTOR</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contactenos.html" aria-current="page">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contacto</h2>
+
+        <p>
+            En VËKTOR valoramos la comunicación directa y técnica. Nuestro equipo de ingenieros
+            está disponible para responder consultas especializadas sobre rendimiento,
+            biomecánica y especificaciones técnicas.
+        </p>
+
+        <!-- Sección: Información de contacto -->
+        <section aria-labelledby="info-contacto-heading">
+            <h3 id="info-contacto-heading">Información de Contacto</h3>
+
+            <address>
+                <p><strong>VËKTOR Performance Bicycles S.L.</strong></p>
+                <p>CR 49 # 46A SUR 103</p>
+                <p>Envigado, Antioquia, Colombia</p>
+                <p>Teléfono: <a href="tel:+5743219876">+57 (4) 321 9876</a></p>
+                <p>Email: <a href="mailto:info@vektor.bike">info@vektor.bike</a></p>
+                <p>Email técnico: <a href="mailto:ingenieria@vektor.bike">ingenieria@vektor.bike</a></p>
+            </address>
+
+            <h4>Horario de Atención</h4>
+            <dl>
+                <dt>Showroom y taller</dt>
+                <dd>Lunes a viernes: 10:00 - 19:00</dd>
+                <dd>Sábados: 10:00 - 14:00 (solo con cita previa)</dd>
+                <dd>Domingos y festivos: Cerrado</dd>
+
+                <dt>Atención telefónica y email</dt>
+                <dd>Lunes a viernes: 09:00 - 20:00</dd>
+                <dd>Tiempo de respuesta email: Máximo 24 horas laborables</dd>
+            </dl>
+
+            <p>
+                <strong>Nota importante:</strong> Para visitas al showroom y estudios biomecánicos,
+                es obligatorio agendar cita previa. Esto nos permite dedicar tiempo de calidad
+                a cada cliente sin interrupciones.
+            </p>
+        </section>
+
+        <!-- Sección: Formulario de contacto -->
+        <section aria-labelledby="formulario-heading">
+            <h3 id="formulario-heading">Formulario de Contacto</h3>
+
+            <p>
+                Completa el siguiente formulario y nuestro equipo te responderá en un plazo máximo
+                de 24 horas laborables. Para consultas técnicas complejas, por favor proporciona
+                el máximo detalle posible.
+            </p>
+
+            <form action="/procesar-contacto" method="post">
+                <fieldset>
+                    <legend>Información Personal</legend>
+
+                    <div>
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required autocomplete="name"
+                            placeholder="Ej: Juan García Martínez">
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+                            placeholder="+34 600 123 456">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Motivo de Contacto</legend>
+
+                    <div>
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="consulta-tecnica">Consulta técnica sobre productos</option>
+                            <option value="compra-bicicleta">Interés en compra de bicicleta</option>
+                            <option value="biomecánica">Agendar estudio biomecánico</option>
+                            <option value="road-to-pro">Información programa Road to Pro</option>
+                            <option value="servicio-tecnico">Servicio técnico / Garantía</option>
+                            <option value="componentes">Consulta sobre componentes individuales</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="8" required
+                            placeholder="Describe tu consulta con el máximo detalle posible. Para consultas técnicas, incluye datos como peso, altura, nivel de ciclismo, objetivos, etc."></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información Adicional (Opcional)</legend>
+
+                    <p>
+                        Esta información nos ayuda a preparar una respuesta más precisa y personalizada.
+                    </p>
+
+                    <div>
+                        <label for="nivel-ciclismo">Nivel de ciclismo</label>
+                        <select id="nivel-ciclismo" name="nivel-ciclismo">
+                            <option value="">Selecciona una opción</option>
+                            <option value="principiante">Principiante (menos de 1 año)</option>
+                            <option value="intermedio">Intermedio (1-3 años)</option>
+                            <option value="avanzado">Avanzado (3-5 años)</option>
+                            <option value="experto">Experto (más de 5 años)</option>
+                            <option value="competicion">Competición amateur</option>
+                            <option value="profesional">Profesional / Ex-profesional</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="disciplina">Disciplina principal</label>
+                        <select id="disciplina" name="disciplina">
+                            <option value="">Selecciona una opción</option>
+                            <option value="ruta">Ciclismo de ruta</option>
+                            <option value="triatlon">Triatlón</option>
+                            <option value="contrarreloj">Contrarreloj</option>
+                            <option value="gran-fondo">Gran fondo / Cicloturismo</option>
+                            <option value="ultra-distancia">Ultra distancia</option>
+                            <option value="pista">Pista</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="presupuesto">Rango de presupuesto</label>
+                        <select id="presupuesto" name="presupuesto">
+                            <option value="">Selecciona una opción</option>
+                            <option value="menos-5000">Menos de €5,000</option>
+                            <option value="5000-8000">€5,000 - €8,000</option>
+                            <option value="8000-12000">€8,000 - €12,000</option>
+                            <option value="mas-12000">Más de €12,000</option>
+                            <option value="sin-limite">Sin límite definido</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="checkbox" id="acepto-privacidad" name="acepto-privacidad" required>
+                    <label for="acepto-privacidad">
+                        He leído y acepto la política de privacidad. Entiendo que mis datos serán
+                        utilizados únicamente para responder a mi consulta. *
+                    </label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="acepto-newsletter" name="acepto-newsletter">
+                    <label for="acepto-newsletter">
+                        Deseo recibir información técnica, actualizaciones de productos y contenido
+                        educativo sobre rendimiento en ciclismo (máximo 1 email al mes).
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar Consulta</button>
+                </div>
+
+                <p>
+                    <small>Los campos marcados con * son obligatorios.</small>
+                </p>
+            </form>
+        </section>
+
+        <!-- Sección: Ubicación -->
+        <section aria-labelledby="ubicacion-heading">
+            <h3 id="ubicacion-heading">Ubicación</h3>
+
+            <p>
+                Nuestras instalaciones están ubicadas en Envigado, Antioquia, en una zona de fácil acceso.
+                Disponemos de showroom con todas nuestras bicicletas, taller técnico especializado y
+                laboratorio de biomecánica con tecnología de captura de movimiento 3D.
+            </p>
+
+            <h4>Cómo Llegar</h4>
+            <dl>
+                <dt>En transporte público</dt>
+                <dd>Metro: Línea A, estación Envigado (10 minutos caminando)</dd>
+                <dd>Autobús: Rutas que pasan por la Carrera 49 Sur</dd>
+
+                <dt>En bicicleta</dt>
+                <dd>Cicloruta disponible en la zona</dd>
+                <dd>Aparcamiento seguro para bicicletas en el edificio</dd>
+
+                <dt>En coche</dt>
+                <dd>Parqueadero privado disponible</dd>
+                <dd>Zona de fácil acceso desde la Avenida Las Vegas</dd>
+            </dl>
+
+
+            <!-- Mapa interactivo de Google Maps -->
+            <div id="mapa-ubicacion" aria-label="Mapa de ubicación de VËKTOR en Envigado">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2345678901234!2d-75.58!3d6.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMTIuMCJOIDc1wrAzNCc0OC4wIlc!5e0!3m2!1ses!2sco!4v1234567890123!5m2!1ses!2sco&q=CR+49+%23+46A+SUR+103,+Envigado,+Antioquia"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Ubicación de VËKTOR en Envigado">
+                </iframe>
+                <p style="margin-top: var(--space-sm);">
+                    <strong>Dirección exacta:</strong> CR 49 # 46A SUR 103, Envigado, Antioquia
+                </p>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=CR+49+%23+46A+SUR+103,+Envigado,+Antioquia"
+                        target="_blank" rel="noopener noreferrer"
+                        style="font-family: var(--font-display); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Abrir en Google Maps →
+                    </a>
+                </p>
+            </div>
+
+
+            <h4>Instalaciones</h4>
+            <ul>
+                <li>Showroom de 200m² con todas las bicicletas disponibles para prueba</li>
+                <li>Taller técnico especializado con herramientas de precisión</li>
+                <li>Laboratorio de biomecánica con sistema de captura 3D Vicon</li>
+                <li>Rodillos inteligentes para pruebas de potencia y aerodinámica</li>
+                <li>Zona de espera con café y documentación técnica</li>
+            </ul>
+
+            <p>
+                <strong>Importante:</strong> Todas las visitas requieren cita previa.
+                Esto nos permite preparar las bicicletas de tu interés y dedicarte
+                atención personalizada sin interrupciones.
+            </p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 VËKTOR. Ingeniería de precisión para ciclistas profesionales.</p>
+        <p>Todos los datos técnicos son medibles, verificables y reproducibles.</p>
+
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contactenos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/data/disciplines.js"></script>
+    <script src="assets/js/data/products.js"></script>
+    <script src="assets/js/modules/bot.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

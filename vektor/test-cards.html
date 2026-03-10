@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Service Cards</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/service-cards.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-container">
+        <h1>Test de Tarjetas de Servicio</h1>
+
+        <div class="services-grid">
+
+            <!-- Service 1: Biomechanics -->
+            <article class="service-card" data-service="biomechanics">
+                <div class="service-card__image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=90&fit=crop"
+                        alt="Estudio biomecánico profesional">
+                </div>
+                <span class="service-card__subtitle">Optimización de Posición</span>
+                <h3 class="service-card__title">Estudio Biomecánico Avanzado</h3>
+                <p class="service-card__description">
+                    Análisis completo de posición utilizando captura de movimiento 3D,
+                    medición de presiones y análisis de eficiencia de pedaleo.
+                </p>
+                <div class="service-card__price">
+                    <span class="service-card__price-label">Desde</span>
+                    €280
+                </div>
+                <a href="#" class="service-card__cta" onclick="event.preventDefault(); alert('Click funciona!');">
+                    Ver detalles
+                </a>
+            </article>
+
+            <!-- Service 2: Road to Pro -->
+            <article class="service-card" data-service="roadToPro">
+                <div class="service-card__image">
+                    <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=800&q=90&fit=crop"
+                        alt="Programa Road to Pro">
+                </div>
+                <span class="service-card__subtitle">Asesoramiento Integral</span>
+                <h3 class="service-card__title">Programa Road to Pro</h3>
+                <p class="service-card__description">
+                    Programa de asesoramiento técnico integral que combina optimización de equipamiento,
+                    análisis de datos y seguimiento personalizado.
+                </p>
+                <div class="service-card__price">
+                    <span class="service-card__price-label">Desde</span>
+                    €890
+                </div>
+                <a href="#" class="service-card__cta" onclick="event.preventDefault(); alert('Click funciona!');">
+                    Ver detalles
+                </a>
+            </article>
+
+            <!-- Service 3: Custom Build -->
+            <article class="service-card" data-service="customBuild">
+                <div class="service-card__image">
+                    <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=800&q=90&fit=crop"
+                        alt="Construcción personalizada">
+                </div>
+                <span class="service-card__subtitle">A Tu Medida</span>
+                <h3 class="service-card__title">Construcción Personalizada</h3>
+                <p class="service-card__description">
+                    Bicicleta completamente personalizada desde cero. Geometría adaptada,
+                    componentes premium y acabado único.
+                </p>
+                <div class="service-card__price">
+                    <span class="service-card__price-label">Desde</span>
+                    €12,000
+                </div>
+                <a href="#" class="service-card__cta" onclick="event.preventDefault(); alert('Click funciona!');">
+                    Ver detalles
+                </a>
+            </article>
+
+        </div>
+    </div>
+
+    <script src="assets/js/modules/services.js"></script>
+</body>
+
+</html>

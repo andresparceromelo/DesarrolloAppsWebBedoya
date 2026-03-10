@@ -1,0 +1,50 @@
+/* ============================================================================
+   VËKTOR - Main Stylesheet
+   ============================================================================ */
+
+/* Core */
+@import 'core/variables.css';
+@import 'core/reset.css';
+@import 'core/typography.css';
+
+/* Components */
+@import 'components/header.css';
+@import 'components/footer.css';
+@import 'components/buttons.css';
+@import 'components/forms.css';
+
+/* Utils */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    :root {
+        --space-md: calc(var(--space-unit) * 4);
+        --space-lg: calc(var(--space-unit) * 8);
+        --space-xl: calc(var(--space-unit) * 12);
+        --space-xxl: calc(var(--space-unit) * 16);
+    }
+
+    header {
+        padding: var(--space-sm);
+    }
+
+    nav ul {
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 0 var(--space-sm);
+    }
+}

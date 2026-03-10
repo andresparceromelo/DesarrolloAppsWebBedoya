@@ -1,0 +1,319 @@
+/* ============================================================================
+   VËKTOR - Home Page Styles
+   ============================================================================ */
+
+/* HERO SECTION (Slider) */
+main>section:first-of-type {
+    padding: 0;
+    margin: 0;
+    /* Reset margins if any */
+    height: 100vh;
+    /* Full viewport height */
+    max-height: 100vh;
+    display: block;
+    /* Override flex */
+    position: relative;
+    overflow: hidden;
+    margin-top: -80px;
+    /* Offset header height to go under it if transparent, or just occupy full space */
+}
+
+/* Adjust main for full hero */
+main {
+    margin-top: 0;
+    /* Removing top margin to let hero touch top */
+    padding: 0;
+    /* Full width */
+    max-width: 100%;
+}
+
+/* Rest of sections container */
+main>section:not(:first-of-type) {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-xxl) var(--space-md);
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Overlay for readability */
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+    transition-delay: 0.5s;
+}
+
+.slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: var(--font-display, sans-serif);
+    /* Ensure font consistency */
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* FILOSOFÍA DE INGENIERÍA */
+main>section:nth-of-type(2) ul {
+    list-style: none;
+    display: grid;
+    gap: var(--space-sm);
+}
+
+main>section:nth-of-type(2) li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    padding-left: var(--space-md);
+    position: relative;
+    opacity: 0;
+    animation: fadeInLeft 0.6s var(--ease-out-expo) forwards;
+}
+
+main>section:nth-of-type(2) li:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+main>section:nth-of-type(2) li:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+main>section:nth-of-type(2) li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+main>section:nth-of-type(2) li:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+main>section:nth-of-type(2) li:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+main>section:nth-of-type(2) li:nth-child(6) {
+    animation-delay: 1.1s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main>section:nth-of-type(2) li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-text);
+    border-radius: 50%;
+}
+
+/* Services CTA Section */
+.services-cta-container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-surface, #111);
+    border-radius: 4px;
+    /* Slight rounding or sharp for brutalist */
+    overflow: hidden;
+    color: #fff;
+    min-height: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.services-cta-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-cta-content {
+    flex: 1;
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #050505 100%);
+    position: relative;
+}
+
+.services-cta-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primary, #fff);
+    /* Accent line */
+}
+
+.services-cta-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-lg);
+    opacity: 0.8;
+    max-width: 500px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    border: 1px solid #fff;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.services-cta-image {
+    flex: 1.2;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s var(--ease-out-expo);
+    filter: grayscale(0.5);
+}
+
+.services-cta-container:hover .services-cta-image img {
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    .services-cta-container {
+        flex-direction: column;
+    }
+
+    .services-cta-image {
+        max-height: 250px;
+        order: -1;
+        /* Image on top on mobile */
+    }
+
+    .services-cta-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* VALIDACIÓN */
+main>section:nth-of-type(4) ul {
+    list-style: none;
+    display: grid;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+main>section:nth-of-type(4) li {
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+main>section:nth-of-type(4) li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-text);
+    border-radius: 50%;
+}

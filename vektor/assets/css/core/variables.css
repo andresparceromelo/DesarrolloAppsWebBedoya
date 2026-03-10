@@ -1,0 +1,49 @@
+/* ============================================================================
+   VËKTOR - Variables Globales
+   ============================================================================ */
+
+:root {
+    /* Tipografía */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Colores - Minimalismo extremo */
+    --color-bg: #FAFAFA;
+    --color-text: #0A0A0A;
+    --color-text-secondary: #6B6B6B;
+    --color-accent: #0A0A0A;
+    /* Premium Black */
+    --color-accent-hover: #333333;
+    --color-border: #E5E5E5;
+    --color-border-dark: #BDBDBD;
+
+    /* Colores de Estado */
+    --color-success: #2E7D32;
+    --color-warning: #F57C00;
+    --color-error: #C62828;
+
+    /* Espaciado editorial */
+    --space-unit: 8px;
+    --space-xs: calc(var(--space-unit) * 2);
+    /* 16px */
+    --space-sm: calc(var(--space-unit) * 3);
+    /* 24px */
+    --space-md: calc(var(--space-unit) * 6);
+    /* 48px */
+    --space-lg: calc(var(--space-unit) * 10);
+    /* 80px */
+    --space-xl: calc(var(--space-unit) * 15);
+    /* 120px */
+    --space-xxl: calc(var(--space-unit) * 20);
+    /* 160px */
+
+    /* Easing personalizado - Movimiento premium */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+
+    /* Z-Index Layers */
+    --z-header: 1000;
+    --z-modal: 2000;
+    --z-bot: 1500;
+    --z-cart: 1600;
+}

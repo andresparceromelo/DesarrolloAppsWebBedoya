@@ -1,0 +1,78 @@
+/* ============================================================================
+   VËKTOR - Buttons Component
+   ============================================================================ */
+
+.btn,
+button[type="submit"],
+button[type="button"] {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    border: 1px solid var(--color-text);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s var(--ease-out-expo),
+        box-shadow 0.3s var(--ease-in-out-cubic),
+        background-color 0.3s ease,
+        color 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover,
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active,
+button[type="submit"]:active,
+button[type="button"]:active {
+    transform: translateY(0);
+}
+
+/* Variación Secundaria (Outline) */
+.btn--secondary,
+.btn--outline {
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.btn--secondary:hover,
+.btn--outline:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+/* Variación Small */
+.btn--small {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.75rem;
+}
+
+/* Variación Large */
+.btn--large {
+    padding: var(--space-md) var(--space-xl);
+    font-size: 1rem;
+}
+
+/* Variación Full Width */
+.btn--full {
+    width: 100%;
+    display: block;
+}
+
+/* Disabled */
+.btn:disabled,
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
